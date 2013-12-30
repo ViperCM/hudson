@@ -59,7 +59,7 @@ unset BUILD_NUMBER
 export PATH=~/bin:$PATH
 
 export USE_CCACHE=1
-export BUILD_WITH_COLORS=0
+export BUILD_WITH_COLORS=1
 
 if [ ! "$(ccache -s|grep -E 'max cache size'|awk '{print $4}')" = "50.0" ]
 then
@@ -75,7 +75,7 @@ then
 fi
 
 git config --global user.name $(whoami)@$NODE_NAME
-git config --global user.email jenkins@gitmanagement.tk
+git config --global user.email jenkins@projectopencannibal.org
 
 mkdir -p $REPO_BRANCH
 cd $REPO_BRANCH
