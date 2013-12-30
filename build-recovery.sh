@@ -82,7 +82,7 @@ cd $REPO_BRANCH
 
 rm -rf .repo/manifests*
 rm -f .repo/local_manifest.xml
-repo init -u $SYNC_PROTO://github.com/thenameisnigel/cot-android.git -b $REPO_BRANCH
+repo init -u $SYNC_PROTO://github.com/thenameisnigel/android.git -b $REPO_BRANCH
 check_result "repo init failed."
 
 cp $WORKSPACE/hudson/recovery.xml .repo/local_manifest.xml
